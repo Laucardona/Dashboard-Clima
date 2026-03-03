@@ -1,5 +1,5 @@
-import { loadWeatherByCity, getServiceState } from "./service.js";
-import { render } from "./ui.js";
+import { loadWeatherByCity, getServiceState } from "../service.js";
+import { render } from "../ui.js";
 
 const form = document.getElementById("searchForm");
 const input = document.getElementById("cityInput");
