@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+h1 {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid #ffcc00;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffcc00;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* RESULTADO */
+#result {
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+.card p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* MENSAJES */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.loading {
+    color: white;
+    font-weight: bold;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 MÓVIL */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* 📱 TABLET */
+@media (min-width: 601px) and (max-width: 992px) {
+    .card {
+        max-width: 500px;
+    }
+}
+
+/* 🖥 ESCRITORIO */
+@media (min-width: 993px) {
+    main {
+        max-width: 900px;
+    }
+
+    .card {
+        max-width: 450px;
+    }
+}
